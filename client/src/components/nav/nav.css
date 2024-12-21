@@ -1,0 +1,24 @@
+.navitem {
+    height: 10vh;
+    align-items: center;
+  }
+  
+  .navitem i {
+    color: #adbbda;
+    font-size: 2rem;
+    cursor: crosshair;
+  }
+  
+  .navitem i:hover {
+    color: #8697c4;
+    transform: translateY(2px);
+  }
+
+  .chatIcons {
+    margin: 1rem 0rem;
+  }
+  
+  
+  .chatIcons:hover {
+    transform: scale(1.1);
+  }

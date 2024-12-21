@@ -1,68 +1,61 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  scroll-behavior: smooth;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+html, body {
+  max-width: 100%;
+  overflow-x: clip;
+  scrollbar-width: none;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+
+header {
+  height: 10vh;
+  align-items: center;
+  background-color: #adbbda;
+  border: solid, 1px, white;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  color: #3d52a0;
+}
+
+main {
+  height: 100vh;
+  background-color: #ede8f5;
+  position: relative;
+}
+
+nav {
+  background-color: #3d52a0;
+}
+
+footer {
+ height: 10vh;
+ text-align: center;
+ background-color: #adbbda;
+ border: solid, 1px, white;
+}
+
+#editName {
+  position: absolute;
+  top:40%;
+  left: 50%;
+  height: 30vh;
+  width: 50vh;
+  background-color: #adbbda;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  opacity: 0;
+}
+
+input[id="changeName"], button {
+  border-radius: 2rem;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+  width: 5vw;
 }

@@ -1,0 +1,42 @@
+#menu {
+    height: 10vh;
+    background-color: #adbbda;
+}
+
+#content {
+    height: 85vh;
+    overflow: scroll;
+    scrollbar-width: none;
+}
+
+#type {
+    height: 5vh;
+    background-color: #adbbda;
+}
+
+input[id="messageBar"] {
+    padding-right: 5em;
+    height: 5vh;
+    width: 100%;
+    border-radius: 1rem;
+}
+
+i[class="fa-regular fa-paper-plane"] {
+    position: absolute;
+    right: 2rem;
+    top: 30%;
+    cursor: pointer;
+}
+
+i[class="fa-regular fa-paper-plane"]:hover {
+    color: #8697c4;
+    transform: translateY(1px);
+}
+
+#content .row {
+    height: fit-content;
+    width: fit-content;
+    border-radius: 1rem;
+    background-color: green;
+    margin: 1em 0em;
+}

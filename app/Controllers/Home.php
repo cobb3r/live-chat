@@ -77,4 +77,63 @@ class Home extends BaseController
         echo view('signup');
         echo view('template/footer');
     }
+
+    public function signin()
+    {
+        helper(['form']);
+
+        if ($this->request->getMethod() == 'POST') {
+            $rules = [
+                'eaddress' => 'required|min_length[3]|max_length[50]|valid_email|existingAcc[eaddress]',
+                'pass' => 'required|min_length[3]|max_length[30]|validateUser[eaddress, pass]',
+            ];
+
+            $messages = [
+                'eaddress' => [
+                    'min_length' => 'Email Must Be 3 Digits or Longer',
+                    'max_length' => 'Email Must Be 50 Digits or Less',
+                    'valid_email' => 'Invalid Email Address',
+                    'existingAcc' => 'You Do Not Have an Account Yet, Please Sign Up'
+                ],
+                'pass' => [
+                    'min_length' => 'Password Must Be 3 Digits or Longer',
+                    'max_length' => 'Password Must Be 30 Digits or Less',
+                    'validateUser' => 'Password Does not Match'
+                ],
+            ];
+
+            if (! $this->validate($rules, $messages)) 
+            {
+                echo view('template/header');
+                return view('signin', ['validation' => $this->validator,]);
+                echo view('template/footer'); //Footer Wont Reload On Form Submission, Include With Main
+            } else {
+                $model = new user();
+                $user = $model->where('email', $_POST['eaddress'])->first();
+
+                $data = [
+                    'id' => $user['id'],
+                    'firstName' => $user['firstName'],
+                    'lastName' => $user['lastName'],
+                    'eaddress' => $_POST['eaddress'],
+                    'pass' => $_POST['pass'],
+                    'signedIn' => true
+                ];
+
+                session()->set($data);
+
+                return redirect()->to('/');
+            }
+        }
+        
+        echo view('template/header');
+        echo view('signin');
+        echo view('template/footer');
+    }
+
+    public function signout() 
+    {
+        session()->destroy();
+        return redirect()->to('/');
+    }
 }

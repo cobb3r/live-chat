@@ -1,17 +1,17 @@
-<main class="row">
-    <div class="col-10">
+<main class="row d-flex align-items-center justify-content-center">
+    <div class="col-10 col-md-8 col-lg-6 p-3 text-center">
         <h1>Sign Up</h1>
         <hr>
         <form id="form" class="text-center p-1" action="/signup" method="post">
             <div class="row">
-                <div class="col-12" style="height: fit-content;">
+                <div class="col-12 col-md-6 d-flex align-items-center justify-content-center flex-column" style="height: fit-content;">
                     <label for="fName">First Name</label>
                     <input class="text-center" type="text" id="fName" name="fName" placeholder="John" required>
                     <br>
                     <label for="lName">Last Name</label>
                     <input class="text-center" type="text" id="lName" name="lName" placeholder="Doe" required>
                 </div>
-                <div class="col-12" style="height: fit-content;">
+                <div class="col-12 col-md-6 d-flex align-items-center justify-content-center flex-column" style="height: fit-content;">
                     <label for="eaddress">Email Address</label>
                     <input class="text-center" type="email" id="eaddress" name="eaddress" placeholder="example@example.com" required>
                     <br>

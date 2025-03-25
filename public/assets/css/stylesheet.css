@@ -1,0 +1,29 @@
+* {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: clip;
+    scrollbar-width: none;
+}
+
+main {
+    height: 100vh;
+}
+
+nav {
+    background-color: rgb(55, 55, 55);
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+footer {
+    background-color: rgb(55, 55, 55);
+}

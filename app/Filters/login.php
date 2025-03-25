@@ -11,7 +11,7 @@ class login implements FilterInterface
     public function before(RequestInterface $request, $arguments = null)
     {
         if (session()->get('signedIn')) { 
-            return redirect()->to('/test');
+            return redirect()->to('/');
         }
     }
 

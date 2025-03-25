@@ -18,7 +18,7 @@
                 </li>
             <?php } else { ?>
                 <li>
-                    <a href="/signup">Chat</a>
+                    <a href="/chat">Chat</a>
                 </li>
                 </br>
                 <li>

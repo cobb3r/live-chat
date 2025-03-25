@@ -21,4 +21,9 @@ class user extends Model {
     }
 }
 
+class connection extends Model {
+    protected $table = 'connection';
+    protected $allowedFields = ['id', 'resourceID', 'userID', 'name'];
+}
+
 ?>

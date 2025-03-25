@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="/assets/css/stylesheet.css?php echo time(); ?>">
     </head>
     <body class="container-fluid p-0">
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
             <a class="navbar-brand ms-2" href="/">
                 <img src="/assets/img/logo.png" alt="Logo" style="height: 5vh; width: 4vw;">
                 <p style="display: inline;">Live Chat</p> 
@@ -39,7 +39,7 @@
                         </li>
                     <?php } else { ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="/signup"><span class="fa-solid fa-comments"></span>Chat</a>
+                            <a class="nav-link" href="/chat"><span class="fa-solid fa-comments"></span>Chat</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/signout"><span class="fa-solid fa-right-to-bracket"></span>Sign Out</a>

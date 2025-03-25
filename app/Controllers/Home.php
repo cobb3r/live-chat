@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\user;
+use App\Models\connection;
 
 class Home extends BaseController
 {
@@ -135,5 +136,12 @@ class Home extends BaseController
     {
         session()->destroy();
         return redirect()->to('/');
+    }
+
+    public function chat()
+    {
+        echo view('template/header');
+        echo view('chat');
+        echo view('template/footer');
     }
 }

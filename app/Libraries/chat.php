@@ -49,8 +49,11 @@ class Chat implements MessageComponentInterface {
 
         foreach ($this->clients as $client) {
             if ($from !== $client) {
+                $data = [
+                    'message' => $msg,
+                ];
                 // The sender is not the receiver, send to each client connected
-                $client->send($msg);
+                $client->send(json_encode($data));
             }
         }
     }

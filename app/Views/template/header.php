@@ -16,7 +16,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
             <a class="navbar-brand ms-2" href="/">
                 <img src="/assets/img/logo.png" alt="Logo" style="height: 5vh; width: 4vw;">
-                <p style="display: inline;">Live Chat</p> 
+                <p style="display: inline; color: #61892f;">Live Chat</p> 
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation">
                 <span class="navbar-toggler-icon"></span>
